@@ -1,0 +1,39 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: #36c;
+    background-image: linear-gradient(
+        to top right,
+        #36c,
+        #448
+    );
+
+}
+nav a {
+    color: #ccc;
+}
+.menu{
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+}
+
+.menu.active{
+    max-height: 100vh;
+}
+
+/* Medium Devices - Tablets */
+@media screen and (min-width: 768px){
+    #menu-button{
+        display: none;
+    }
+    .menu{
+        width: auto;
+        display: flex;
+        gap: .5rem;
+        max-height: 100vh;
+    }
+}

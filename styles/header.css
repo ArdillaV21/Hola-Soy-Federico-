@@ -4,16 +4,12 @@
     justify-content: center;
     align-content: center;
     font-size: min(calc(.8rem + 2vw),3rem);
-    text-shadow: 0 0 .25rem #ffffff;
+    text-shadow: 0 0 .50rem #333;
     /* Background Properties */
-    color: black;
-    background-color: #448;
+    color: white;
+    background-color: rgb(255, 255, 255);
     background-image:
-         /*Gradiante  */
-        linear-gradient(
-            hsla(200, 50%, 50%, .8),
-            hsla(270, 50%, 50%, .8)
-        ),
+        radial-gradient(hsla(100,10%,50%,0.2),rgb(65, 36, 192)),
         url(../assets/bg/wd.png),
         url(../assets/bg/whithebg.jpg);
     background-position: center; 
