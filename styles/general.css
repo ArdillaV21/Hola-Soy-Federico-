@@ -1,5 +1,7 @@
 *{
+    box-sizing: border-box;
     font-family: "Ubuntu", "Raleway", "consolas", sans-serif;
+    scroll-behavior: smooth;
 }
 /* Reinicio de estilos */
 body,h1,h2,h3,.menu{
