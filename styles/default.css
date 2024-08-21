@@ -3,6 +3,7 @@
 /* Reglas Generales */
 @import url("general.css");
 @import url("layout.css");
+@import url("example.css");
 /* Navegacion Principal */
 @import url("navigation.css");
 /* Cabecera de Pagina */

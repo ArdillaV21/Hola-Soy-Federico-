@@ -20,6 +20,12 @@ main{
 #footer{
     grid-area: footer;
 }
+main{
+    display: grid;
+    padding: .5rem;
+    gap: 1rem;
+}
+
 /* Medium Devices */
 @media screen and (min-width: 768px) {
     body{
@@ -40,5 +46,16 @@ main{
             "main"
             "footer"
         ;
+    }
+    main{
+        grid-template-columns: 3fr 1fr;
+    }
+    section{
+        grid-column: 1;
+    }
+    aside{
+        grid-column: 2;
+        grid-row: 1;
+        height: calc(100vh - 3rem);
     }
 }

@@ -1,0 +1,14 @@
+.example{
+    border: 1px solid #333;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: center;
+    align-content: center;
+    gap: .5rem;
+    height: 100%;
+}
+.example > div{
+    background-color: #448;
+    padding: 1rem;
+    color: #eee;
+}
