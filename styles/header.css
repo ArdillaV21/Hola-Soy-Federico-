@@ -6,8 +6,8 @@
     font-size: min(calc(.8rem + 2vw),3rem);
     text-shadow: 0 0 .50rem #333;
     /* Background Properties */
-    color: white;
-    background-color: rgb(255, 255, 255);
+    color: var(--light);
+    background-color: var(--first);
     background-image:
         radial-gradient(hsla(100,10%,50%,0.2),rgb(65, 36, 192)),
         url(../assets/bg/wd.png),
@@ -15,7 +15,7 @@
     background-position: center; 
     background-size: 
         cover,
-        clamp(120px, 100%, 25rem);
+        clamp(var(--xs), 100%, var(--md));
     background-repeat: no-repeat;
     background-attachment: fixed,
     scroll;

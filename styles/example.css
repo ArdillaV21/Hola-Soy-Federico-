@@ -8,7 +8,7 @@
     height: 100%;
 }
 .example > div{
-    background-color: #448;
+    background-color: var(--first);
     padding: 1rem;
-    color: #eee;
+    color: var(--light);
 }

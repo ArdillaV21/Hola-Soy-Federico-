@@ -1,5 +1,8 @@
 .card{
+    --text: var(--light);
+    --bg: var(--first);
     overflow: hidden;
+    border-radius: .25rem;
     padding: 1rem;
     box-shadow: 0 0 .25rem #666;
 }
@@ -10,5 +13,38 @@
     background-color: var(--bg);
 }
 .card-footer{
+    margin: 1rem -1rem -1rem;
+    box-shadow: 0 -.1rem .25rem var(--grey);
+    padding: 1rem;
 
+}
+/* Colores */
+.bg-light{
+    --text: var(--first);
+    --bg: var(--light);
+}
+.bg-dark{
+    --bg: var(--dark);
+}
+.bg-first{
+    --bg: var(--first);
+}
+.bg-second{
+    --bg: var(--second);
+}
+.bg-third{
+    --bg: var(--third);
+}
+.bg-success{
+    --bg: var(--success);
+}
+.bg-warning{
+    --text: var(--dark);
+    --bg: var(--warning);
+}
+.bg-danger{
+    --bg: var(--danger);
+}
+.bg-info{
+    --bg: var(--info);
 }
