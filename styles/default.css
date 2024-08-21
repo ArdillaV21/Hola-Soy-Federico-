@@ -1,6 +1,7 @@
 /* Importaciones */
 @import url(https://fonts.googleapis.com/css2?family=Raleway&family=Ubuntu);
 /* Reglas Generales */
+@import url("variable.css");
 @import url("general.css");
 @import url("layout.css");
 @import url("example.css");
@@ -9,5 +10,5 @@
 /* Cabecera de Pagina */
 @import url("header.css");
 /* Contenido Principal */
-
+@import url("card.css");
 /* Pie de Pagina */
