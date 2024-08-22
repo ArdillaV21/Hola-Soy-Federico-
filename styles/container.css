@@ -1,0 +1,31 @@
+
+[class*="display-"]{
+    display: var(--d);
+}
+[class*="block"]{
+    --d: block;
+}
+[class*="flex"]{
+    --d: flex;
+}
+[class*="grid"]{
+    --d: grid;
+}
+/* Gral */
+.auto > *{
+    flex: 1 1 min(100%, var(--size));
+}
+.auto{
+    grid-template-columns: repeat(auto-fit, minmax(min(100%,var(--size)),1fr));
+}
+/* Flexbox */
+.wrap{
+    flex-wrap: wrap;
+}
+.nowrap{
+    flex-wrap: nowrap;
+}
+.wrap-reverse{
+    flex-wrap: nowrap;
+}
+/* CSS Grid */

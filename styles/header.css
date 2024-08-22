@@ -15,7 +15,7 @@
     background-position: center; 
     background-size: 
         cover,
-        clamp(var(--xs), 100%, var(--md));
+        clamp(var(--md), 100%, var(--md));
     background-repeat: no-repeat;
     background-attachment: fixed,
     scroll;
