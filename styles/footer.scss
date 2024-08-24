@@ -1,0 +1,41 @@
+//Variables
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+
+/*Pie de pagina - compilable*/
+#footer{
+    padding: 1rem;
+    //Mapa de contacto
+    .map{
+        --color: var(--first);
+            --bg: var(--light);
+        border: none;
+        &.cover{
+            width: 100%;
+            height: 100%;
+        }
+        &.btn{ 
+            color: var(--color);
+            background-color: var(--bg);
+            padding: .5rem 1rem;
+            &:hover{
+                --color: var(--light);
+                --bg: var(--first);
+                box-shadow: 0 .25rem .5rem var(--dark);
+            }
+            &:active{
+                border: 1px solid var(--second);
+            }
+        }
+    }
+    //Formulario
+    #contact{
+        border-radius: .25rem;
+    }
+    //CopyRight
+    p:last-child{
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
