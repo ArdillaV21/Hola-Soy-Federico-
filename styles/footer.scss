@@ -2,36 +2,71 @@
 $sm: 576px;
 $md: 768px;
 $lg: 992px;
+$position: static,relative,absolute,fixed,sticky;
 
+//Mixins: Estilos que reciben argumentos y anidadan como atributos
+@mixin normalize($p:0, $m:0, $b:0){
+    margin: $m;
+    border: $b;
+    padding: $p;
+}
+//Estilos de Utilidad
+.zeroise{
+    @include normalize();
+}
+.cover{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+//Loops: Estilos que se repiten dada una condicion
+//Atributos de posicion
+@each $p in $position{
+    .p-#{$p}{
+        position:$p;
+    }
+}
+%activeMap{
+    @extend .p-fixed;
+    z-index: 2;
+}
 /*Pie de pagina - compilable*/
 #footer{
-    padding: 1rem;
+    @extend .p-relative;
     //Mapa de contacto
+    background: linear-grandient(#eee8, #3338);
     .map{
+        @extend .p-absolute,.zeroise;
         --color: var(--first);
-            --bg: var(--light);
-        border: none;
-        &.cover{
-            width: 100%;
-            height: 100%;
-        }
-        &.btn{ 
+        --bg: var(--light);
+        &.btn{
+            @include normalize(.5rem 1rem,1rem,1px solid);
+            top: 0;
+            right: 0;
             color: var(--color);
             background-color: var(--bg);
-            padding: .5rem 1rem;
             &:hover{
                 --color: var(--light);
                 --bg: var(--first);
                 box-shadow: 0 .25rem .5rem var(--dark);
             }
-            &:active{
-                border: 1px solid var(--second);
+        }
+        &.active{
+            @extend %activeMap;
+            & + button{
+                @extend %activeMap;
             }
         }
     }
     //Formulario
     #contact{
+        @include normalize(1rem,5rem auto 1rem);
+        max-width: $sm;
         border-radius: .25rem;
+        background-color: var(--light);
     }
     //CopyRight
     p:last-child{
