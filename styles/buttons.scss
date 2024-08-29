@@ -1,0 +1,17 @@
+
+.btn{
+    --color: var(--light);
+    --bg: var(--first);
+    position: relative;
+    color: var(--color);
+    min-width: 2rem;
+    border-radius: .25rem;
+    border: 1px solid;
+    padding: .5rem;
+    background-color: transparent;
+    z-index: 1;
+    &:hover{
+        color: var(--bg);
+        background-color: var(--color);
+    }
+}

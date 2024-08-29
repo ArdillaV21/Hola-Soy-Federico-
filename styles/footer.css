@@ -34,6 +34,7 @@
 
 #footer .map.active + button, #footer .map.active {
   z-index: 2;
+  opacity: 0.95;
 }
 
 /*Pie de pagina - compilable*/
