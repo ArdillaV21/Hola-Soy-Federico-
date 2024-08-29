@@ -1,3 +1,45 @@
+@charset "UTF-8";
+[class*=icon-]::before {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+[class*=icon-]:hover::before {
+  filter: grayscale(70%);
+}
+
+.icon-home::before {
+  content: "🏠";
+}
+.icon-about::before {
+  content: "📰";
+}
+.icon-training::before {
+  content: "📚";
+}
+.icon-services::before {
+  content: "💻";
+}
+.icon-experience::before {
+  content: "🏛";
+}
+.icon-contact::before {
+  content: "📱";
+}
+.icon-menu::before {
+  content: "☰";
+}
+.icon-close::before {
+  content: "×";
+}
+.icon-max::before {
+  content: "➕";
+}
+.icon-min::before {
+  content: "➖";
+}
+
 .btn {
   --color: var(--light);
   --bg: var(--first);
@@ -9,6 +51,7 @@
   padding: 0.5rem;
   background-color: transparent;
   z-index: 1;
+  font-size: 0.8rem;
 }
 .btn:hover {
   color: var(--bg);

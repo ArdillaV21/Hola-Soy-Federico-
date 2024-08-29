@@ -1,4 +1,53 @@
-
+//Iconos
+@mixin pseudo($text: 🏠){
+    &::before{
+        content: '#{$text}';
+    }
+}
+[class*="icon-"]{
+    &::before{
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+        filter: grayscale(100%);
+        transition: all .5s ease;
+    }
+    &:hover::before{
+        filter: grayscale(70%);
+    }
+}
+.icon-{
+    &home{
+        @include pseudo();
+    }
+    &about{
+        @include pseudo(📰);
+    }
+    &training{
+        @include pseudo(📚);
+    }
+    &services{
+        @include pseudo(💻);
+    }
+    &experience{
+        @include pseudo(🏛);
+    }
+    &contact{
+        @include pseudo(📱);
+    }
+    &menu{
+        @include pseudo(\2630);
+    }
+    &close{
+        @include pseudo(\00d7);
+    }
+    &max{
+        @include pseudo(➕);
+    }
+    &min{
+        @include pseudo(➖);
+    }
+}
+//Botones
 .btn{
     --color: var(--light);
     --bg: var(--first);
@@ -10,6 +59,7 @@
     padding: .5rem;
     background-color: transparent;
     z-index: 1;
+    font-size: .8rem;
     &:hover{
         color: var(--bg);
         background-color: var(--color);
