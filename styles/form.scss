@@ -1,0 +1,79 @@
+$colors:
+    primary var(--first),
+    second var(--second),
+    light var(--light),
+    dark var(--dark),
+    danger var(--danger),
+    warning var(--warning),
+    success var(--success),
+    info var(--info),
+    none transparent
+;
+$attributes:
+    text color,
+    bg background-color,
+    border border-color,
+    outline outline-color,
+    shade --shade,
+    shadow --shadow,
+;
+@each $prop, $attr in $attributes{
+    @each $name, $value in $colors{
+        %#{$prop}-#{$name}{
+            #{$attr}: $value;
+        }
+    }
+}
+
+@mixin props($p:0,$m:0,$b:0,$ba:border,$ma:margin,$pa:padding){
+    #{$ma}: $m;
+    #{$ba}: $b;
+    #{$pa}: $p;
+}
+.flex{
+    display: flex;
+    &-row{
+        flex-direction: row;
+        &-reverse{
+            flex-direction: row-reverse;
+        }
+    }
+    &-column{
+        flex-direction: column;
+        &-reverse{
+            flex-direction: column-reverse;
+        }    
+    }
+    &-wrap{
+        flex-wrap: wrap;
+    }
+    &-gap{
+        gap: .25rem;
+    }
+}
+form{
+    input,
+    textarea,
+    select{
+        @include props(.5rem, .25rem, 1px,border-width, $ma:border-radius);
+        &:focus{
+            @extend %outline-info;
+            &+.validation{
+                max-height:5rem;
+            }
+            &:valid{
+                @extend %outline-success;
+                &+.validation{@extend %text-success;}
+            }
+            &:not(:placeholder-shown):invalid{
+                @extend %outline-danger;
+                &+.validation{@extend %text-danger;}
+            }
+        } 
+        &+.validation{
+            @include props(0,0,.8rem,font-size,$pa:max-height);
+            max-height: 0;
+            overflow: hidden;
+        }
+    }
+}

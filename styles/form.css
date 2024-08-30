@@ -1,0 +1,73 @@
+form input:focus:not(:placeholder-shown):invalid + .validation,
+form textarea:focus:not(:placeholder-shown):invalid + .validation,
+form select:focus:not(:placeholder-shown):invalid + .validation {
+  color: var(--danger);
+}
+
+form input:focus:valid + .validation,
+form textarea:focus:valid + .validation,
+form select:focus:valid + .validation {
+  color: var(--success);
+}
+
+form input:focus:not(:placeholder-shown):invalid,
+form textarea:focus:not(:placeholder-shown):invalid,
+form select:focus:not(:placeholder-shown):invalid {
+  outline-color: var(--danger);
+}
+
+form input:focus:valid,
+form textarea:focus:valid,
+form select:focus:valid {
+  outline-color: var(--success);
+}
+
+form input:focus,
+form textarea:focus,
+form select:focus {
+  outline-color: var(--info);
+}
+
+.flex {
+  display: flex;
+}
+.flex-row {
+  flex-direction: row;
+}
+.flex-row-reverse {
+  flex-direction: row-reverse;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-column-reverse {
+  flex-direction: column-reverse;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-gap {
+  gap: 0.25rem;
+}
+
+form input,
+form textarea,
+form select {
+  border-radius: 0.25rem;
+  border-width: 1px;
+  padding: 0.5rem;
+}
+form input:focus + .validation,
+form textarea:focus + .validation,
+form select:focus + .validation {
+  max-height: 5rem;
+}
+form input + .validation,
+form textarea + .validation,
+form select + .validation {
+  margin: 0;
+  font-size: 0.8rem;
+  max-height: 0;
+  max-height: 0;
+  overflow: hidden;
+}
