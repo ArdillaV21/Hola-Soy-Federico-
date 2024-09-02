@@ -1,0 +1,67 @@
+.a-ease {
+  animation-timing-function: ease;
+}
+
+.a-ease-in {
+  animation-timing-function: ease-in;
+}
+
+.a-ease-out {
+  animation-timing-function: ease-out;
+}
+
+.a-ease-in-out {
+  animation-timing-function: ease-in-out;
+}
+
+.a-linear {
+  animation-timing-function: linear;
+}
+
+.t-ease {
+  transition-timing-function: ease;
+}
+
+.t-ease-in {
+  transition-timing-function: ease-in;
+}
+
+.t-ease-out {
+  transition-timing-function: ease-out;
+}
+
+.t-ease-in-out {
+  transition-timing-function: ease-in-out;
+}
+
+.t-linear {
+  transition-timing-function: linear;
+}
+
+.dir-normal {
+  animation-direction: normal;
+}
+
+.dir-reverse {
+  animation-direction: reverse;
+}
+
+.dir-alternate {
+  animation-direction: alternate;
+}
+
+.dir-alternate-reverse {
+  animation-direction: alternate-reverse;
+}
+
+.loading {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  margin: 0.5rem;
+  border: 0.5rem solid;
+  border-color: transparent #cde #36c #248;
+  animation-name: loading;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
