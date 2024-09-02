@@ -19,4 +19,22 @@
     background-repeat: no-repeat;
     background-attachment: fixed,
     scroll;
+
+    perspective: 3rem;
+    perspective-origin: top center;
+    text-align: center;
+}
+
+#header h1{
+    transform: rotateX(5deg);
+    animation: intro 5s ease-out 1s backwards;
+    
+}
+
+#header p{
+    transform: 
+        skewX(45deg)
+        translateX(-100vw)
+    ;
+    animation: enter 5s ease-out forwards;
 }
