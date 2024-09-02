@@ -23,6 +23,7 @@
     perspective: 3rem;
     perspective-origin: top center;
     text-align: center;
+    overflow: hidden;
 }
 
 #header h1{
