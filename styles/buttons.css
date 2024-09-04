@@ -27,6 +27,9 @@
 .icon-contact::before {
   content: "📱";
 }
+.icon-projects::before {
+  content: "💾";
+}
 .icon-menu::before {
   content: "☰";
 }

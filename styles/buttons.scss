@@ -34,6 +34,9 @@
     &contact{
         @include pseudo(📱);
     }
+    &projects{
+        @include pseudo(💾)
+    }
     &menu{
         @include pseudo(\2630);
     }
